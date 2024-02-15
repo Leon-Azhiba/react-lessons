@@ -1,20 +1,22 @@
+import "./Navbar.css"
+
 const Navbar = () => {
     return (
         <nav className='nav'>
             <div>
-            <a>Profile</a>
+                <a>Profile</a>
             </div>
             <div>
-            <a>Messages</a>
+                <a>Messages</a>
             </div>
             <div>
-            <a>News</a>
+                <a>News</a>
             </div>
             <div>
-            <a>Banking</a>
+                <a>Banking</a>
             </div>
             <div>
-            <a>Settings</a>
+                <a>Settings</a>
             </div>
         </nav>
     )
