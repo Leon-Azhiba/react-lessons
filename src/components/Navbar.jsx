@@ -1,21 +1,21 @@
-import "./Navbar.css"
+import n from "./Navbar.module.css"
 
 const Navbar = () => {
     return (
-        <nav className='nav'>
-            <div>
+        <nav className={n.nav}>
+            <div className={n.item}>
                 <a>Profile</a>
             </div>
-            <div>
+            <div className={n.item}>
                 <a>Messages</a>
             </div>
-            <div>
+            <div className={n.item}>
                 <a>News</a>
             </div>
-            <div>
+            <div className={n.item}>
                 <a>Banking</a>
             </div>
-            <div>
+            <div className={n.item}>
                 <a>Settings</a>
             </div>
         </nav>
