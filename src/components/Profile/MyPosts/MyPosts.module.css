@@ -1,0 +1,9 @@
+.AddPost {
+    display: grid;
+}
+.AddPost textarea {
+    height: 60px;
+}
+.AddPost button {
+    height: 40px;
+}

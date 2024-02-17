@@ -1,0 +1,8 @@
+.item {
+    color: blueviolet;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+}
+.item img {
+    width: 50px;
+}
