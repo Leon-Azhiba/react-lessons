@@ -5,7 +5,12 @@
   grid-template-areas: 
   "h h"
   "n c";
-  grid-template-rows: 60px 1fr;
+  grid-template-rows: auto 1fr;
   grid-template-columns: auto 1fr;
   margin: 0 auto;
+}
+
+.app-wrapper-content {
+  grid-area: c;
+  border: 2px solid #111;
 }
