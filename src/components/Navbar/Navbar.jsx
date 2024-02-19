@@ -5,19 +5,19 @@ const Navbar = () => {
     return (
         <nav className={n.nav}>
             <div className={n.item}>
-                <NavLink to="/profile">Profile</NavLink>
+                <NavLink className={({isActive}) => (isActive ? n.active : n.item)} to="/profile" end>Profile</NavLink>
             </div>
             <div className={n.item}>
-                <NavLink to="/dialogs">Messages</NavLink>
+                <NavLink className={({isActive}) => (isActive ? n.active : n.item)} to="/dialogs" end>Messages</NavLink>
             </div>
             <div className={n.item}>
-                <NavLink to="news">News</NavLink>
+                <NavLink className={({isActive}) => (isActive ? n.active : n.item)} to="/news" end>News</NavLink>
             </div>
             <div className={n.item}>
-                <NavLink to="banking">Banking</NavLink>
+                <NavLink className={({isActive}) => (isActive ? n.active : n.item)} to="/banking" end>Banking</NavLink>
             </div>
             <div className={n.item}>
-                <NavLink to="settings">Settings</NavLink>
+                <NavLink className={({isActive}) => (isActive ? n.active : n.item)} to="/settings" end>Settings</NavLink>
             </div>
         </nav>
     )

@@ -3,7 +3,12 @@
     border: 2px solid #111;
 }
 
-.item {
-    color: crimson;
+.item a {
+    color: rgb(138, 43, 226);
     margin: 10px;
+    text-decoration: none;
+}
+
+.item a.active {
+    color: crimson;
 }
