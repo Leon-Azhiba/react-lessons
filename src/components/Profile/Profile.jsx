@@ -1,13 +1,11 @@
-import MyPosts from "./MyPosts/MyPosts";
 import p from "./Profile.module.css";
+import MyPosts from "./MyPosts/MyPosts";
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
 const Profile = () => {
     return (
-        <div>
-            <div className={p.bg}>
-                <img src='https://discordhome.com/user_upload/backgrounds/18437background.jpg' />
-            </div>
-            <div>ava+description</div>
+        <div className={p.profile}>
+            <ProfileInfo descr="Description" />
             <MyPosts />
         </div>
     )

@@ -1,5 +1,8 @@
 import p from "./MyPosts.module.css";
 import Post from "./Post/Post";
+import {postsData} from "../../../index";
+
+let postElements = postsData.map(el => <Post message={el.post} />)
 
 const MyPosts = () => {
     return (
@@ -9,8 +12,7 @@ const MyPosts = () => {
             <button>Add post</button>
         </div>
         <div className={p.posts}>
-            <Post message="Hey, how are you?" />
-            <Post message="I'm so tired." />
+            {postElements}
         </div>
     </div>
     )

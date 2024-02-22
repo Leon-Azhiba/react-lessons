@@ -1,24 +1,21 @@
 import { NavLink } from "react-router-dom";
 import n from "./Navbar.module.css"
 
-const Navbar = () => {
+const NavItem = (props) => {
+    return (
+        <div className={n.item}>
+            <NavLink className={({isActive}) => (isActive ? n.active : n.item)} to={props.navRef} end>{props.itemName}</NavLink>
+        </div>
+    )
+}
+
+const Navbar = (props) => {
     return (
         <nav className={n.nav}>
-            <div className={n.item}>
-                <NavLink className={({isActive}) => (isActive ? n.active : n.item)} to="/profile" end>Profile</NavLink>
-            </div>
-            <div className={n.item}>
-                <NavLink className={({isActive}) => (isActive ? n.active : n.item)} to="/dialogs" end>Messages</NavLink>
-            </div>
-            <div className={n.item}>
-                <NavLink className={({isActive}) => (isActive ? n.active : n.item)} to="/news" end>News</NavLink>
-            </div>
-            <div className={n.item}>
-                <NavLink className={({isActive}) => (isActive ? n.active : n.item)} to="/banking" end>Banking</NavLink>
-            </div>
-            <div className={n.item}>
-                <NavLink className={({isActive}) => (isActive ? n.active : n.item)} to="/settings" end>Settings</NavLink>
-            </div>
+            <NavItem navRef="/profile" itemName="Profile" />
+            <NavItem navRef="/dialogs" itemName="Messages" />
+            <NavItem navRef="/news" itemName="News" />
+            <NavItem navRef="/callback" itemName="Call Back" />
         </nav>
     )
 }
