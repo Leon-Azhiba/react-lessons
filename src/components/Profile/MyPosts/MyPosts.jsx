@@ -2,9 +2,8 @@ import p from "./MyPosts.module.css";
 import Post from "./Post/Post";
 import {postsData} from "../../../index";
 
-let postElements = postsData.map(el => <Post message={el.post} />)
-
 const MyPosts = () => {
+    let postElements = postsData.map(el => <Post message={el.post} />);
     return (
     <div className={p.MyPosts}>
         <div className={p.AddPost}>
