@@ -1,9 +1,7 @@
 import p from "./MyPosts.module.css";
 import Post from "./Post/Post";
-import {postsData} from "../../../index";
 
-const MyPosts = () => {
-    let postElements = postsData.map(el => <Post message={el.post} />);
+const MyPosts = (props) => {
     return (
     <div className={p.MyPosts}>
         <div className={p.AddPost}>
@@ -11,7 +9,7 @@ const MyPosts = () => {
             <button>Add post</button>
         </div>
         <div className={p.posts}>
-            {postElements}
+            {props.posts.map(el => <Post post={el.post} />)}
         </div>
     </div>
     )
