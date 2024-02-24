@@ -9,7 +9,7 @@ const MyPosts = (props) => {
             <button>Add post</button>
         </div>
         <div className={p.posts}>
-            {props.posts.map(el => <Post post={el.post} />)}
+            {props.posts.postsData.map(el => <Post post={el.post} />)}
         </div>
     </div>
     )
