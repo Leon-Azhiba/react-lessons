@@ -9,6 +9,7 @@ let state = {
 }
 
 export let addPost = (postMessage) => {
+    debugger;
     let newPost = {
         post: postMessage,
         id: 4,
