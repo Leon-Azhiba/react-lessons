@@ -9,7 +9,7 @@ const NavItem = (props) => {
     )
 }
 
-const Navbar = (props) => {
+const Navbar = () => {
     return (
         <nav className={n.nav}>
             <NavItem navRef="/profile" itemName="Profile" />
