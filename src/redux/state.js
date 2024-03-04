@@ -33,7 +33,7 @@ let store = {
             this._callSubscriber(this._state);
         } else if (action.type === SEND_MESSAGE) {
             let newMessage = {
-                text: this._state.dialogsData.newMessageText,
+                text: this._state.messagesPage.newMessageText,
                 id: 5};
             this._state.messagesPage.messagesData.push(newMessage);
             this._state.messagesPage.newMessageText = "";
@@ -42,7 +42,7 @@ let store = {
             this._state.profilePage.newPostText = action.newText;
             this._callSubscriber(this._state);
         } else if (action.type === UPDATE_NEW_MESSAGE_TEXT) {
-            this._state.dialogsData.newMessageText = action.newText;
+            this._state.messagesPage.newMessageText = action.newText;
             this._callSubscriber(this._state);
         }
     }
