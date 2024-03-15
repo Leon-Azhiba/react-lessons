@@ -15,6 +15,7 @@ const Navbar = () => {
             <NavItem navRef="/profile" itemName="Profile" />
             <NavItem navRef="/dialogs" itemName="Messages" />
             <NavItem navRef="/news" itemName="News" />
+            <NavItem navRef="/users" itemName="Users" />
             <NavItem navRef="/callback" itemName="Call Back" />
         </nav>
     )
