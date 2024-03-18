@@ -3,6 +3,7 @@ import Dialogs from "./Dialogs";
 import { connect } from "react-redux";
 
 const MapStateToProps = (state) => {
+    debugger;
     return {
         dialogsData: state.messagesPage.dialogsData,
         messagesData: state.messagesPage.messagesData,

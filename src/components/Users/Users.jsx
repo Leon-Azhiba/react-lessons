@@ -1,12 +1,18 @@
+import axios from 'axios'
 import usr from './Users.module.css'
 
 const Users = (props) => {
+    debugger;
+    axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+        props.setUsers(response.data.items)
+    })
+    
     return (
-        <div use={props.users}>
+        <div>
             {props.users.map(u => <div key={u.id}>
                 <span>
                     <div>
-                        <img src={u.userPhoto} alt="img" className={usr.userimg} />
+                        <img src={u.photos.small} alt="img" className={usr.userimg} />
                     </div>
                     <div>
                         {u.followed ? <button onClick={() => {props.unfollow(u.id)}}>Unfollow</button> : <button onClick={() => {props.follow(u.id)}}>Follow</button>}
@@ -14,12 +20,12 @@ const Users = (props) => {
                 </span>
                 <span>
                     <span>
-                        <div>{u.fullName}</div>
+                        <div>{u.name}</div>
                         <div>{u.status}</div>
                     </span>
                     <span>
-                        <div>{u.location.city}</div>
-                        <div>{u.location.country}</div>
+                        <div>Gudauta</div>
+                        <div>Abkhazia</div>
                     </span>
                 </span>
             </div>)}
