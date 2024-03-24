@@ -1,20 +1,11 @@
+import axios from 'axios'
 import usr from './Users.module.css'
 
 const Users = (props) => {
     if (props.users.length === 0) {
-        props.setUsers([
-                { name: "psychotmg",
-                    id: 30991,
-                    uniqueUrlName: null,
-                    photos: {
-                        small: null,
-                        large: null
-                    },
-                    status: null,
-                    followed: false
-                }
-            ]
-        )
+        axios.get('https://social-network.samuraijs.com/api/1.0/users').then(response => {
+            props.setUsers(response.data.items)
+        })
     }
     return (
         <div>
