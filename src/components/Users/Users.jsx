@@ -29,7 +29,7 @@ class Users extends React.Component {
                 <div>
                     {
                         pages.map(p => {
-                                return <span className={this.currentPage === p && usr.selectedPage} onClick={(e) => {this.onPageChanged(p)}}>{p}</span>
+                                return <span className={this.props.currentPage === p && usr.selectedPage} onClick={(e) => {this.onPageChanged(p)}}>{p}</span>
                             }
                         )
                     }
